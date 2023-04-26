@@ -6,7 +6,6 @@ const fileRegex = /\.(pug)$/;
 export default function renderPlugin() {
   return {
     name: 'transform-file',
-
     transform(src, filename) {
       if (fileRegex.test(filename)) {
         const tokens = lex(src, { filename });
